@@ -176,7 +176,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.director-info .details {
+.details {
     width: 100%;
     height: 165px;
     display: flex;
@@ -191,7 +191,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.data .name {
+.name {
     width: 100%;
     height: 28px;
     color: #79C8C7;
@@ -218,6 +218,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.5s ease-in-out;
+    z-index: 5;
 }
 .button.pink {
     background-image: url("./images/pinkCross.png");
@@ -227,12 +228,56 @@ header {
     background-image: url("./images/blueX.png");
     transform: rotate(90deg);
 }
-
-
-.slide-info {
-    display: none;
+/* ---------------------------------------------slide */
+.slide-frame {
+    width: 350px;
+    height: 253px;
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    overflow: hidden;
 }
-
+.slide-info {
+    width: 350px;
+    height: 253px;
+    padding: 32px 24px;
+    background: #002529;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%); 
+    transition: transform 0.5s ease;
+}
+.slide-info.show {
+    transform: translateY(0); 
+}
+.slide-info .details {
+    height: 155px;
+}
+.slide-texts {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.slide-citate {
+    width: 250px;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.slide-socmed {
+    width: 60px;
+    height: 20px;
+    background-image: url(./images/director\ soc\ media.svg);
+    cursor: pointer;
+}
 /* ------------------------------------------clients */
 .clients {
     background: #012F34;

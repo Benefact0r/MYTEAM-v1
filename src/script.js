@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".button").forEach(button => {
         button.addEventListener("click", function () {
             let svg = button.querySelector("svg");
+            const targetSlide = document.querySelector(`#${button.getAttribute('data-target')}`);
 
             if (button.classList.contains("pink")) {
                 button.classList.remove("pink");
@@ -23,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 button.classList.remove("blue");
                 button.classList.add("pink");
                 if (svg) svg.style.visibility = "visible"; 
+            }
+            if (targetSlide) {
+                targetSlide.classList.toggle('show'); 
             }
         });
     });
