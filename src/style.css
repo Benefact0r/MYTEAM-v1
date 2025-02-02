@@ -103,4 +103,56 @@ body {
 .bottom-img {
     padding-left: 87%;
     padding-top: 28px;
+=======
+/* ABOUT PAGE 2.3 !!! */
+
+.clients {
+    background: #012F34;
+    width: 100%;
+    height: 437px;
+}
+.clients-header{
+    display: flex;
+    gap: 65px;
+}
+.clients-header h1 {
+    width: 920px;
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 140px;
+}
+
+.clients-img {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.clients-verge {
+    width: 165px;
+    height: 28px;
+}
+
+.clients-jakarta {
+    width: 184px;
+    height: 23px;
+}
+
+.clients-guardian {
+    width: 184px;
+    height: 23px;
+}
+
+.clients-tech {
+    width: 165px;
+    height: 28px;
+}
+
+.clients-gadgets {
+    width: 98px;
+    height: 45px;
 }
