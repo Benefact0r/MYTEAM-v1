@@ -44,7 +44,7 @@ body {
     text-align: center;
     padding-left: 250px;
 
-} */
+} 
 
 .bottom-stories {
     display: flex;
@@ -57,7 +57,6 @@ body {
     gap: 30px;
     justify-content: center;
     padding-top: 25px; */
-}
 
 .bottom h1, .bottom span {
     width: 932px;
@@ -238,7 +237,7 @@ body {
 .bottom-img {
     padding-left: 87%;
     padding-top: 28px;
-=======
+}
 /* ABOUT PAGE 2.3 !!! */
 
 .clients {
