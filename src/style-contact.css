@@ -86,3 +86,8 @@ header {
     font-weight: 600;
     line-height: 28px;
 }
+.home:hover,
+.about:hover,
+.contact:hover {
+    cursor: pointer;
+}
