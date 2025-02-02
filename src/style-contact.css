@@ -19,6 +19,7 @@ body {
     width: 100%;
     position: relative;
 }
+
 header {
     width: 100%;
     padding: 75px 165px;
@@ -29,6 +30,7 @@ header {
     position: relative;
     z-index: 1;
 }
+
 .header-top {
     width: 100%;
     height: 48px;
@@ -36,6 +38,7 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+
 .top-left {
     width: 380px;
     height: 100%;
@@ -43,14 +46,16 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+
 .myteam {
     width: 160px;
     height: 100%;
-    background-image: url(./images/myteam\ 2.png);
+    background-image: url(./images/myteam.svg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .home {
     width: 89px;
     height: 28px;
@@ -60,7 +65,8 @@ header {
     line-height: 30px;
     text-align: end;
 }
-.about  {
+
+.about {
     width: 51px;
     height: 28px;
     color: #FFF;
@@ -68,6 +74,7 @@ header {
     font-weight: 600;
     line-height: 30px;
 }
+
 .top-right {
     width: 153px;
     height: 48px;
@@ -77,12 +84,163 @@ header {
     align-items: center;
     justify-content: center;
 }
-.contact    {
+
+.contact {
     background-color: transparent;
     border: none;
     color: #FFF;
-    font-family: Livvic;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+}
+
+/* ///////////////////////----->registration */
+
+.registration {
+    width: 100%;
+    height: auto;
+}
+
+.contact-main-box {
+    display: flex;
+    gap: 65px;
+    padding-top: 50px;
+}
+
+.contact-left-side {
+    width: 35%;
+}
+
+.contact-left-side h1 {
+    width: 350px;
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px;
+}
+
+.contact-left-side h4 {
+    width: 540px;
+    color: #F67E7E;
+    font-family: Livvic;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 10px;
+}
+
+.contact-logo-text {
+    padding-top: 32px;
+}
+
+.contact-logo-text1 {
+    display: flex;
+    align-items: start;
+    gap: 23px;
+}
+
+.contact-logo-text2 {
+    display: flex;
+    align-items: start;
+    gap: 23px;
+}
+
+.contact-logo-text3 {
+    display: flex;
+    align-items: start;
+    gap: 23px;
+}
+
+.contact-logo-text h6 {
+    width: 445px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 30px;
+
+}
+
+.contact-logo-text img {
+    width: 82px;
+    height: 82px;
+    padding-top: 10px;
+}
+
+.contact-right-side {
+    width: 35%;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.registration-form input,
+.registration-form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: solid white;
+    border-width: 0 0 1px 0;
+    color: white;
+    outline: none;
+    padding-left: 16px;
+    padding-bottom: 20px;
+}
+
+#name,
+#email,
+#comp-name,
+#title,
+#message {
+    width: 1000px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.115px;
+    height: 50px;
+    font-family: "livvic";
+}
+
+.registration-form input:focus,
+.registration-form textarea:focus {
+    border-color: #79c8c7;
+}
+
+#submit {
+    width: 123px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 2px solid #FFF;
+    background: #FFF;
+    color: #004047;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    font-family: "livvic";
+}
+
+#name::placeholder,
+#email::placeholder,
+#comp-name::placeholder,
+#title::placeholder,
+#message::placeholder {
+    color: #FFF;
+    opacity: 0.6;
+}
+.contact-botton-img{
+    padding-top: 330px;
+    padding-left: 60px;
 }
