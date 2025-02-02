@@ -137,3 +137,141 @@ header {
     font-weight: 550;
     line-height: 28px;
 }
+
+
+.bottom {
+    background: #004047;
+    width: 100vw;
+    height: auto;
+}
+
+.bottom-header {
+    padding-top: 50px;
+    text-align: center;
+    padding-left: 250px;
+}
+
+.bottom-stories {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.bottom h1 {
+    width: 932px;
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.bottom span {
+    color: #79C8C7;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.bottom-stories p {
+    width: 350px;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    position: relative;
+    padding-top: 69px;
+}
+
+.bottom-stories h5 {
+    width: 350px;
+    color: #79C8C7;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 24px;
+}
+
+.bottom-stories h6 {
+    color: #FFF;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.bottom-stories-first,
+.bottom-stories-second,
+.bottom-stories-third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-stories img {
+    padding-top: 32px;
+}
+
+.commas {
+    position: absolute;
+}
+
+.bottom-img {
+    padding-left: 87%;
+    padding-top: 28px;
+=======
+/* ABOUT PAGE 2.3 !!! */
+
+.clients {
+    background: #012F34;
+    width: 100%;
+    height: 437px;
+}
+.clients-header{
+    display: flex;
+    gap: 65px;
+}
+.clients-header h1 {
+    width: 920px;
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 140px;
+}
+
+.clients-img {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.clients-verge {
+    width: 165px;
+    height: 28px;
+}
+
+.clients-jakarta {
+    width: 184px;
+    height: 23px;
+}
+
+.clients-guardian {
+    width: 184px;
+    height: 23px;
+}
+
+.clients-tech {
+    width: 165px;
+    height: 28px;
+}
+
+.clients-gadgets {
+    width: 98px;
+    height: 45px;
+}
