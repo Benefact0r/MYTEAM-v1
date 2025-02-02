@@ -94,14 +94,21 @@ header {
 .registration {
     width: 100%;
     height: auto;
+    padding: 50px 165px;
+    position: relative;
 }
 .contact-main-box {
+    width: 100%;
     display: flex;
-    gap: 65px;
-    padding-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-main-box-img {
+    position: absolute;
+    left: 0;
 }
 .contact-left-side {
-    width: 35%;
+    width: 540px;
 }
 .contact-left-side h1 {
     width: 350px;
@@ -151,7 +158,7 @@ header {
     padding-top: 10px;
 }
 .contact-right-side {
-    width: 35%;
+    width: 540px;
 }
 .registration-form {
     display: flex;
