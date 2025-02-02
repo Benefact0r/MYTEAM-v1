@@ -13,34 +13,22 @@
 body {
     background-color: #014E56;
     font-family: "Livvic", serif;
-}
-
-.mainContainer {
     width: 100%;
     position: relative;
 }
-.G7-1 {
+.about1 {
     position: absolute;
-    left: 0;
-    top: 250px;
-    z-index: 2;
+    right: 0;
+    top: 320px;
 }
-.G7-2 {
-    position: absolute;
-    left: 63%;
-    bottom: 65;
-    z-index: 3;
-}
-/* -------------------------------------Header */
 header {
     width: 100%;
-    height: 700px;
+    height: 520px;
     padding: 75px 165px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     z-index: 1;
 }
 .header-top {
@@ -102,34 +90,31 @@ header {
 }
 .header-body {
     width: 100%;
-    height: 375px;
+    height: 200px;
     display: flex;
     align-items: start;
     justify-content: space-between;
 }
 .header-body-left {
-    width: 635px;
-    height: 200px;
+    width: 350px;
+    height: 100px;
     color: #FFF;
-    font-size: 100px;
+    font-size: 64px;
     font-weight: 700;
     line-height: 100px; 
 }
-.header-body-left span {
-    color: #F67E7E;
-}
 .header-body-right {
+    width: 730px;
+    height: 156px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    width: 445px;
-    height: 195px;
 }
 .rectangle {
     width: 50px;
     height: 4px;
-    background: #79C8C7;
+    background: #F67E7E;
 }
 .header-body-right .text {
     color: #FFF;
@@ -137,141 +122,98 @@ header {
     font-weight: 550;
     line-height: 28px;
 }
-
-
-.bottom {
-    background: #004047;
-    width: 100vw;
-    height: auto;
-}
-
-.bottom-header {
-    padding-top: 50px;
-    text-align: center;
-    padding-left: 250px;
-}
-
-.bottom-stories {
+/* --------------------------------------Directors */
+.about-directors {
+    width: 100%;
+    height: 1002px;
+    padding: 140px 165px;
     display: flex;
-    gap: 30px;
-    justify-content: center;
-    padding-top: 25px;
-}
-
-.bottom h1 {
-    width: 932px;
-    color: #FFF;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 48px;
-}
-
-.bottom span {
-    color: #79C8C7;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 48px;
-}
-
-.bottom-stories p {
-    width: 350px;
-    color: #FFF;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004047;
     position: relative;
-    padding-top: 69px;
 }
-
-.bottom-stories h5 {
-    width: 350px;
-    color: #79C8C7;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
-    padding-top: 24px;
+.about2 {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-
-.bottom-stories h6 {
+.about3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.title {
+    width: 100%;
+    height: 48px;
     color: #FFF;
     text-align: center;
-    font-size: 13px;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 18px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
 }
-
-.bottom-stories-first,
-.bottom-stories-second,
-.bottom-stories-third {
+.directors {
+    width: 100%;
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.directors-line {
+    width: 100%;
+    height: 281px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.director-info {
+    width: 350px;
+    height: 253px;
+    padding: 32px 24px;
+    background: #012F34;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.bottom-stories img {
-    padding-top: 32px;
-}
-
-.commas {
-    position: absolute;
-}
-
-.bottom-img {
-    padding-left: 87%;
-    padding-top: 28px;
-=======
-/* ABOUT PAGE 2.3 !!! */
-
-.clients {
-    background: #012F34;
+.director-info .details {
     width: 100%;
-    height: 437px;
-}
-.clients-header{
+    height: 165px;
     display: flex;
-    gap: 65px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-.clients-header h1 {
-    width: 920px;
+.data {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.data .name {
+    width: 100%;
+    height: 28px;
+    color: #79C8C7;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.data .position {
+    width: 100%;
+    height: 23px;
     color: #FFF;
     text-align: center;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 48px;
-    padding-top: 140px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 25px; 
 }
-
-.clients-img {
-    display: flex;
-    gap: 70px;
-    justify-content: center;
-    padding-top: 70px;
-}
-
-.clients-verge {
-    width: 165px;
-    height: 28px;
-}
-
-.clients-jakarta {
-    width: 184px;
-    height: 23px;
-}
-
-.clients-guardian {
-    width: 184px;
-    height: 23px;
-}
-
-.clients-tech {
-    width: 165px;
-    height: 28px;
-}
-
-.clients-gadgets {
-    width: 98px;
-    height: 45px;
+.button  {
+    width: 56px;
+    position: absolute;
+    bottom: -31px;
 }
