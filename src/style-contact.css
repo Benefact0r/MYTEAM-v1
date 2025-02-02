@@ -93,7 +93,7 @@ header {
 
 .registration {
     width: 100%;
-    height: auto;
+    height: 593px;
     padding: 50px 165px;
     position: relative;
 }
@@ -221,8 +221,9 @@ header {
     opacity: 0.6;
 }
 .contact-botton-img{
-    padding-top: 330px;
-    padding-left: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .home:hover,
 .about:hover,
