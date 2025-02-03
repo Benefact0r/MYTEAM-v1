@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "indexHome.html";
     });
     
-    document.querySelector(".contact").addEventListener("click", function () {
+    document.querySelector(".top-right").addEventListener("click", function () {
         window.location.href = "contact.html";
     });
     
