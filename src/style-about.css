@@ -353,3 +353,49 @@ header {
     width: 98px;
     height: 45px;
 }
+
+
+@media (max-width:1085px) {
+    header {
+        height: 556px;
+        padding: 75px;
+    }
+    .header-body {
+        height: 257px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-body-left {
+        width: 100%;
+        height: 56px;
+        text-align: center;
+        line-height: 56px;
+    }
+    .rectangle {
+        display: none;
+    }
+    .header-body-right {
+        width: 457px;
+        height: auto;
+    }
+    .header-body-right .text {
+        height: 177px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .about-directors {
+        height: 1219px;
+        padding: 100px 97px;
+    }
+    .directors {
+        height: 939px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 11px;
+    }
+    .director-info {
+        width: 281px;
+    }
+}
