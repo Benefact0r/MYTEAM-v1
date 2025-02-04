@@ -76,13 +76,157 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.contact    {
-    background-color: transparent;
-    border: none;
     color: #FFF;
-    font-family: Livvic;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+    cursor: pointer;
+}
+.home:hover,
+.about:hover {
+    color: #F67E7E;;
+}
+.top-right:hover {
+    background-color: white;
+    color: #002529;
+}
+
+.registration {
+    width: 100%;
+    height: 593px;
+    padding: 50px 165px;
+    position: relative;
+}
+.contact-main-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-main-box-img {
+    position: absolute;
+    left: 0;
+}
+.contact-left-side {
+    width: 540px;
+}
+.contact-left-side h1 {
+    width: 350px;
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px;
+}
+.contact-left-side h4 {
+    width: 540px;
+    color: #F67E7E;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 10px;
+}
+.contact-logo-text {
+    padding-top: 32px;
+}
+.contact-logo-text1 {
+    display: flex;
+    align-items: start;
+    gap: 23px;
+}
+.contact-logo-text2 {
+    display: flex;
+    align-items: start;
+    gap: 23px;
+}
+.contact-logo-text3 {
+    display: flex;
+    align-items: start;
+    gap: 23px;
+}
+.contact-logo-text h6 {
+    width: 445px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 30px;
+}
+.contact-logo-text img {
+    width: 82px;
+    height: 82px;
+    padding-top: 10px;
+}
+.contact-right-side {
+    width: 540px;
+}
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+.registration-form {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.registration-form input,
+.registration-form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: solid white;
+    border-width: 0 0 1px 0;
+    color: white;
+    outline: none;
+    padding-left: 16px;
+    padding-bottom: 20px;
+}
+#name,
+#email,
+#comp-name,
+#title,
+#message {
+    width: 1000px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.115px;
+    height: 50px;
+    font-family: "livvic";
+}
+.registration-form input:focus,
+.registration-form textarea:focus {
+    border-color: #79c8c7;
+}
+#submit {
+    width: 123px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 2px solid #FFF;
+    background: #FFF;
+    color: #004047;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+#name::placeholder,
+#email::placeholder,
+#comp-name::placeholder,
+#title::placeholder,
+#message::placeholder {
+    color: #FFF;
+    opacity: 0.6;
+}
+.contact-botton-img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.home:hover,
+.about:hover,
+.contact:hover {
+    cursor: pointer;
 }

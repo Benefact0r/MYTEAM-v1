@@ -61,6 +61,7 @@ header {
     font-weight: 600;
     line-height: 30px;
     text-align: end;
+    cursor: pointer;
 }
 .about  {
     width: 51px;
@@ -69,6 +70,7 @@ header {
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
+    cursor: pointer;
 }
 .top-right {
     width: 153px;
@@ -78,15 +80,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.contact    {
-    background-color: transparent;
-    border: none;
     color: #FFF;
-    font-family: Livvic;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+    cursor: pointer;
+}
+.home:hover,
+.about:hover {
+    color: #F67E7E;;
+}
+.top-right:hover {
+    background-color: white;
+    color: #002529;
 }
 .header-body {
     width: 100%;
@@ -125,8 +131,9 @@ header {
 /* --------------------------------------Directors */
 .about-directors {
     width: 100%;
-    height: 1002px;
+    min-height: 1002px;
     padding: 140px 165px;
+    gap: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,18 +162,11 @@ header {
 }
 .directors {
     width: 100%;
-    height: 610px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-}
-.directors-line {
-    width: 100%;
-    height: 281px;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 285px;
+    gap: 30px;
 }
 .director-info {
     width: 350px;
@@ -178,7 +178,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.director-info .details {
+.details {
     width: 100%;
     height: 165px;
     display: flex;
@@ -193,7 +193,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.data .name {
+.name {
     width: 100%;
     height: 28px;
     color: #79C8C7;
@@ -216,4 +216,186 @@ header {
     width: 56px;
     position: absolute;
     bottom: -31px;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out;
+    z-index: 5;
+}
+.button.pink {
+    background-image: url("./images/pinkCross.png");
+    transform: rotate(0deg);
+}
+.button.pink:hover {
+    background-image: url(./images/pink-hover.png);
+}
+.button.blue {
+    background-image: url("./images/blueX.png");
+    transform: rotate(90deg);
+}
+.button.blue:hover {
+    background-image: url(./images/blue-hover.png);
+}
+/* ---------------------------------------------------slide */
+.slide-frame {
+    width: 350px;
+    height: 253px;
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    overflow: hidden;
+}
+.slide-info {
+    width: 350px;
+    height: 253px;
+    padding: 32px 24px;
+    background: #002529;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%); 
+    transition: transform 0.5s ease;
+}
+.slide-info.show {
+    transform: translateY(0); 
+}
+.slide-info .details {
+    height: 155px;
+}
+.slide-texts {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.slide-citate {
+    width: 250px;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.slide-socmed {
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.twit {
+    width: 24px;
+    height: 100%;
+    background-image: url(./images/twit.svg);
+}
+.twit:hover {
+    cursor: pointer;
+    background-image: url(./images/twit-pink.svg);
+}
+.linkd {
+    width: 20px;
+    height: 100%;border-radius: 3px;
+    background-color: white;
+    text-align: center;
+    color: #002529;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:1000;
+}
+.linkd:hover {
+    cursor: pointer;
+    background-color: #F67E7E;
+}
+/* ------------------------------------------clients */
+.clients {
+    background: #012F34;
+    width: 100%;
+    height: 437px;
+}
+.clients-header{
+    display: flex;
+    gap: 65px;
+}
+.clients-header h1 {
+    width: 920px;
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 140px;
+}
+.clients-img {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    padding-top: 70px;
+}
+.clients-verge {
+    width: 165px;
+    height: 28px;
+}
+.clients-jakarta {
+    width: 184px;
+    height: 23px;
+}
+.clients-guardian {
+    width: 184px;
+    height: 23px;
+}
+.clients-tech {
+    width: 165px;
+    height: 28px;
+}
+.clients-gadgets {
+    width: 98px;
+    height: 45px;
+}
+
+
+@media (max-width:1085px) {
+    header {
+        height: 556px;
+        padding: 75px;
+    }
+    .header-body {
+        height: 257px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-body-left {
+        width: 100%;
+        height: 56px;
+        text-align: center;
+        line-height: 56px;
+    }
+    .rectangle {
+        display: none;
+    }
+    .header-body-right {
+        width: 457px;
+        height: auto;
+    }
+    .header-body-right .text {
+        height: 177px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .about-directors {
+        height: 1219px;
+        padding: 100px 97px;
+    }
+    .directors {
+        height: 939px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 11px;
+    }
+    .director-info {
+        width: 281px;
+    }
 }
