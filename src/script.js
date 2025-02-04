@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".about").addEventListener("click", function () {
-        window.location.href = "/about.html";
+        window.location.href = "about.html";
     });
 
     document.querySelector(".home").addEventListener("click", function () {
-        window.location.href = "/index.html";
+        window.location.href = "index.html";
     });
 
     document.querySelector(".top-right").addEventListener("click", function () {
-        window.location.href = "/contact.html";
+        window.location.href = "contact.html";
     });
 
     document.querySelectorAll(".button").forEach(button => {
