@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".home").addEventListener("click", function () {
         window.location.href = "index.html";
     });
+    document.querySelector(".myteam").addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
 
     document.querySelector(".top-right").addEventListener("click", function () {
         window.location.href = "contact.html";
