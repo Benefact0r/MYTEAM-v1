@@ -76,19 +76,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.contact    {
-    background-color: transparent;
-    border: none;
     color: #FFF;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+    cursor: pointer;
 }
 .home:hover,
-.about:hover,
-.contact:hover {
-    cursor: pointer;
+.about:hover {
+    color: #F67E7E;;
+}
+.top-right:hover {
+    background-color: white;
+    color: #002529;
 }
 
 .registration {

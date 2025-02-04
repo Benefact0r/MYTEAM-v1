@@ -73,6 +73,7 @@ header {
     font-weight: 600;
     line-height: 30px;
     text-align: end;
+    cursor: pointer;
 }
 .about  {
     width: 51px;
@@ -81,6 +82,7 @@ header {
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
+    cursor: pointer;
 }
 .top-right {
     width: 153px;
@@ -90,20 +92,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.contact    {
-    background-color: transparent;
-    border: none;
     color: #FFF;
-    font-family: Livvic;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+    cursor: pointer;
 }
 .home:hover,
-.about:hover,
-.contact:hover {
-    cursor: pointer;
+.about:hover {
+    color: #F67E7E;;
+}
+.top-right:hover {
+    background-color: white;
+    color: #002529;
 }
 .header-body {
     width: 100%;
