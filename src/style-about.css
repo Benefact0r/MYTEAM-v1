@@ -14,12 +14,6 @@ body {
     background-color: #014E56;
     font-family: "Livvic", serif;
     width: 100%;
-    position: relative;
-}
-.about1 {
-    position: absolute;
-    right: 0;
-    top: 320px;
 }
 header {
     width: 100%;
@@ -29,7 +23,13 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     z-index: 1;
+}
+.about1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .header-top {
     width: 100%;
@@ -398,5 +398,11 @@ header {
     }
     .director-info {
         width: 281px;
+    }
+}
+
+@media (max-width:768px) {
+    header {
+        padding: 64px 40px;
     }
 }
