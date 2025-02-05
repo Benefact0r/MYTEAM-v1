@@ -152,8 +152,8 @@ header {
     height: auto;
 }
 .bottom-header {
-    padding-top: 50px;
-    padding-left: 250px;
+    display: flex;
+    justify-self: center;
     text-align: center;
 }
 .bottom-stories {
@@ -216,6 +216,7 @@ header {
     position: absolute;
 }
 .bottom-img {
-    padding-left: 87%;
     padding-top: 28px;
+    display: flex;
+    justify-self: end;
 }
