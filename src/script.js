@@ -34,3 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+const burMenu = this.document.querySelector(".menu");
+const mobMenu = document.querySelector(".mobile-menu");
+
+burMenu.addEventListener("click", () => {
+    burMenu.classList.toggle("active");
+    mobMenu.classList.toggle("active");
+})
