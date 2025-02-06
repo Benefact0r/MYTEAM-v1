@@ -28,7 +28,7 @@ body {
 .G7-2 {
     position: absolute;
     left: 63%;
-    top: 600px;
+    bottom: 0;
     z-index: 3;
 }
 /* -------------------------------------burger-menu */
@@ -42,6 +42,7 @@ body {
     right: -255px;
     transition: .5s ease;
     display: none;
+    z-index: 10;
 }
 .mobile-menu.active {
     right: 0;
@@ -50,7 +51,6 @@ body {
     position: absolute;
     right: 0;
     top: 467px;
-    z-index: 10;
 }
 .mobile-menu-list {
     width: 100%;
@@ -73,9 +73,15 @@ body {
     background: transparent;
     margin-left: 331px;
     margin-top: 56px;
-    position: relative;
+    position: fixed;
+    right: 25px;
     cursor: pointer;
     display: none;
+    z-index: 11;
+}
+.menu.active {
+    width: 18px;
+    height: 17px;
 }
 .menu span {
     width: 100%;
@@ -104,7 +110,7 @@ body {
     top: 50%;
     transform: translate(-50%, 50%) rotate(-45deg);
 }
-/* -------------------------------------Header */
+/* -------------------------------------------------------Header */
 header {
     width: 100%;
     height: 700px;
@@ -217,22 +223,24 @@ header {
     font-weight: 550;
     line-height: 28px;
 }
-/* ------------------------------------- bottom */
+/* ----------------------------------------------------- bottom */
 .bottom {
     background: #004047;
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 .bottom-header {
-    padding-top: 50px;
-    padding-left: 250px;
+    display: flex;
+    justify-self: center;
     text-align: center;
 }
 .bottom-stories {
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 30px;
-    padding-top: 25px;
+    padding: 25px 165px 0 165px;
 }
 .bottom h1 {
     width: 932px;
@@ -288,10 +296,84 @@ header {
     position: absolute;
 }
 .bottom-img {
-    padding-left: 87%;
     padding-top: 28px;
+    display: flex;
+    justify-self: end;
+} 
+
+/* --------------------------------------media-nino */
+@media (max-width:1200px) {
+    .bottom {
+        width: auto;
+    }
+    .bottom-header h1,
+    span {
+        font-size: 37px;
+    }
+    .bottom-header {
+        width: 560px;
+    }
+    .bottom-stories p {
+        width: 300px;     
+    }
+    .bottom-stories {
+        gap: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
+@media (max-width:768px) {
+    .bottom {
+        width: 100%;
+        height: auto;
+    }
+    .bottom-header span {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    .bottom-header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    .bottom-header {
+        width: 520px;
+        padding-left: 4%;
+    }
+    .bottom-stories {
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+    }
+    .bottom-stories p {
+        width: 573px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 25px;
+    }
+    .bottom-stories .bottom-stories-img {
+        padding-top: 15px;
+    }
+    .bottom-stories {
+        gap: 20px;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .bottom {
+        width: 100%;
+        height: auto;
+    }
+    .bottom-header {
+        width: 327px;
+        padding-top: 40px;
+    }
+}
+
+/* -----------------------------------------media-maia */
 @media (max-width:1085px) {
     header {
         height: 700px;
@@ -329,7 +411,6 @@ header {
     }
     .header-body-left {
         height: 112px;
-        font-size: 64px; 
         line-height: 56px;
     }
     .rectangle {
@@ -346,8 +427,33 @@ header {
         line-height: 28px;
     }
 }
-@media (max-width:400px) {
+@media (max-width:636px) {
+    .top-left .home,
+    .top-left .about,
+    .header-top .top-right {
+        display: none;
+    }
     .mobile-menu,  .menu {
         display: block;
+    }
+    header {
+        height: 567px;
+        padding: 48px 24px;
+    }
+    .G7-2 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .header-body {
+        height: 350px;
+        padding: 0 0 120px 0;
+    }
+    .header-body-left {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 40px;
+    }
+    .header-body-right {
+        width: 327px;
     }
 }
