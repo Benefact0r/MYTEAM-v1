@@ -14,7 +14,82 @@ body {
     background-color: #014E56;
     font-family: "Livvic", serif;
     width: 100%;
+    position: relative;
 }
+/* -------------------------------------burger-menu */
+.mobile-menu {
+    width: 255px;
+    height: 100vh;
+    padding-top: 112px;
+    background: #2C6269;
+    position: fixed;
+    top: 0;
+    right: -255px;
+    transition: .5s ease;
+    display: none;
+    z-index: 10;
+}
+.mobile-menu.active {
+    right: 0;
+}
+.mobile-menu-group {
+    position: absolute;
+    right: 0;
+    top: 467px;
+}
+.mobile-menu-list {
+    width: 100%;
+    height: 165px;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.mobile-menu-list .home, .about {
+    text-align: start;
+    font-size: 18px;
+    line-height: 28px;
+}
+/* --------------------------------------- */
+.menu { 
+    width: 20px;
+    height: 18px;
+    position: fixed;
+    top: 56px;
+    right: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 11;
+}
+.menu span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+.menu span:nth-child(1) {
+    top: 15%;
+}
+.menu span:nth-child(3) {
+    top: 85%;
+}
+.menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+/* ------------------------------------------------header */
 header {
     width: 100%;
     height: 520px;
@@ -320,7 +395,7 @@ header {
     gap: 65px;
 }
 .clients-header h1 {
-    width: 920px;
+    width: 100%;
     color: #FFF;
     text-align: center;
     font-size: 48px;
@@ -330,8 +405,8 @@ header {
 }
 .clients-img {
     display: flex;
-    gap: 70px;
     justify-content: center;
+    gap: 70px;
     padding-top: 70px;
 }
 .clients-verge {
@@ -405,4 +480,34 @@ header {
     header {
         padding: 64px 40px;
     }
+    .clients-img {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:636px) {
+    .top-left .home,
+    .top-left .about,
+    .header-top .top-right {
+        display: none;
+    }
+    .mobile-menu,  .menu {
+        display: block;
+    }
+    header {
+        height: 567px;
+        padding: 48px 24px;
+    }
+    .header-top {
+        height: 32px;
+    }
+    .myteam {
+        width: 128px;
+        height: 100%;
+    }
+    .header-body {
+        height: 350px;
+        padding: 0 0 120px 0;
+    }
+    
 }

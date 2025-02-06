@@ -1,17 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".about").addEventListener("click", function () {
+    document.querySelectorAll(".about").forEach(element => {
+        element.addEventListener("click", function () {
         window.location.href = "about.html";
+        });
     });
-
-    document.querySelector(".home").addEventListener("click", function () {
+    document.querySelectorAll(".home").forEach(element => {
+        element.addEventListener("click", function () {
         window.location.href = "index.html";
+        });
     });
-    document.querySelector(".myteam").addEventListener("click", function () {
+    document.querySelectorAll(".myteam").forEach(element => {
+        element.addEventListener("click", function () {
         window.location.href = "index.html";
+        });
     });
-
-    document.querySelector(".top-right").addEventListener("click", function () {
+    document.querySelectorAll(".top-right").forEach(element => {
+        element.addEventListener("click", function () {
         window.location.href = "contact.html";
+        });
     });
 
     document.querySelectorAll(".button").forEach(button => {
@@ -34,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 const burMenu = this.document.querySelector(".menu");
 const mobMenu = document.querySelector(".mobile-menu");
 

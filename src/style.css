@@ -70,22 +70,16 @@ body {
 .menu { 
     width: 20px;
     height: 18px;
-    background: transparent;
-    margin-left: 331px;
-    margin-top: 56px;
     position: fixed;
+    top: 56px;
     right: 25px;
     cursor: pointer;
     display: none;
     z-index: 11;
 }
-.menu.active {
-    width: 18px;
-    height: 17px;
-}
 .menu span {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -443,6 +437,13 @@ header {
     .G7-2 {
         left: 50%;
         transform: translateX(-50%);
+    }
+    .header-top {
+        height: 32px;
+    }
+    .myteam {
+        width: 128px;
+        height: 100%;
     }
     .header-body {
         height: 350px;
