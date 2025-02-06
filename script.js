@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".about").addEventListener("click", function () {
-        window.location.href = "About.html";
+        window.location.href = "about.html";
     });
 
     document.querySelector(".home").addEventListener("click", function () {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.querySelector(".top-right").addEventListener("click", function () {
-        window.location.href = "Contact.html";
+        window.location.href = "contact.html";
     });
 
     document.querySelectorAll(".button").forEach(button => {
