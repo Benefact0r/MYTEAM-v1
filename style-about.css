@@ -16,13 +16,80 @@ body {
     width: 100%;
     position: relative;
 }
-
-.about1 {
+/* -------------------------------------burger-menu */
+.mobile-menu {
+    width: 255px;
+    height: 100vh;
+    padding-top: 112px;
+    background: #2C6269;
+    position: fixed;
+    top: 0;
+    right: -255px;
+    transition: .5s ease;
+    display: none;
+    z-index: 10;
+}
+.mobile-menu.active {
+    right: 0;
+}
+.mobile-menu-group {
     position: absolute;
     right: 0;
-    top: 320px;
+    top: 467px;
 }
-
+.mobile-menu-list {
+    width: 100%;
+    height: 165px;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.mobile-menu-list .home, .about {
+    text-align: start;
+    font-size: 18px;
+    line-height: 28px;
+}
+/* --------------------------------------- */
+.menu { 
+    width: 20px;
+    height: 18px;
+    position: fixed;
+    top: 56px;
+    right: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 11;
+}
+.menu span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+.menu span:nth-child(1) {
+    top: 15%;
+}
+.menu span:nth-child(3) {
+    top: 85%;
+}
+.menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+/* ------------------------------------------------header */
 header {
     width: 100%;
     height: 520px;
@@ -31,9 +98,15 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
     z-index: 1;
 }
-
+.about1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 .header-top {
     width: 100%;
     height: 48px;
@@ -41,7 +114,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .top-left {
     width: 380px;
     height: 100%;
@@ -49,7 +121,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .myteam {
     width: 160px;
     height: 100%;
@@ -59,7 +130,6 @@ header {
     background-repeat: no-repeat;
     cursor: pointer;
 }
-
 .home {
     width: 89px;
     height: 28px;
@@ -70,8 +140,7 @@ header {
     text-align: end;
     cursor: pointer;
 }
-
-.about {
+.about  {
     width: 51px;
     height: 28px;
     color: #FFF;
@@ -80,7 +149,6 @@ header {
     line-height: 30px;
     cursor: pointer;
 }
-
 .top-right {
     width: 153px;
     height: 48px;
@@ -95,18 +163,14 @@ header {
     line-height: 28px;
     cursor: pointer;
 }
-
 .home:hover,
 .about:hover {
-    color: #F67E7E;
-    ;
+    color: #F67E7E;;
 }
-
 .top-right:hover {
     background-color: white;
     color: #002529;
 }
-
 .header-body {
     width: 100%;
     height: 200px;
@@ -114,16 +178,14 @@ header {
     align-items: start;
     justify-content: space-between;
 }
-
 .header-body-left {
     width: 350px;
     height: 100px;
     color: #FFF;
     font-size: 64px;
     font-weight: 700;
-    line-height: 100px;
+    line-height: 100px; 
 }
-
 .header-body-right {
     width: 730px;
     height: 156px;
@@ -132,20 +194,17 @@ header {
     align-items: start;
     justify-content: space-between;
 }
-
 .rectangle {
     width: 50px;
     height: 4px;
     background: #F67E7E;
 }
-
 .header-body-right .text {
     color: #FFF;
     font-size: 18px;
     font-weight: 550;
     line-height: 28px;
 }
-
 /* --------------------------------------Directors */
 .about-directors {
     width: 100%;
@@ -158,20 +217,18 @@ header {
     justify-content: space-between;
     background-color: #004047;
     position: relative;
+    overflow: hidden;
 }
-
 .about2 {
     position: absolute;
     left: 0;
     top: 0;
 }
-
 .about3 {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-
 .title {
     width: 100%;
     height: 48px;
@@ -181,7 +238,6 @@ header {
     font-weight: 600;
     line-height: 48px;
 }
-
 .directors {
     width: 100%;
     height: auto;
@@ -190,7 +246,6 @@ header {
     grid-auto-rows: 285px;
     gap: 30px;
 }
-
 .director-info {
     width: 350px;
     height: 253px;
@@ -201,7 +256,6 @@ header {
     flex-direction: column;
     align-items: center;
 }
-
 .details {
     width: 100%;
     height: 165px;
@@ -210,7 +264,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .data {
     width: 100%;
     height: 53px;
@@ -218,7 +271,6 @@ header {
     flex-direction: column;
     align-items: center;
 }
-
 .name {
     width: 100%;
     height: 28px;
@@ -228,7 +280,6 @@ header {
     font-weight: 600;
     line-height: 28px;
 }
-
 .data .position {
     width: 100%;
     height: 23px;
@@ -237,10 +288,9 @@ header {
     font-size: 15px;
     font-style: italic;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 25px; 
 }
-
-.button {
+.button  {
     width: 56px;
     position: absolute;
     bottom: -31px;
@@ -250,25 +300,20 @@ header {
     transition: transform 0.5s ease-in-out;
     z-index: 5;
 }
-
 .button.pink {
     background-image: url("./images/pinkCross.png");
     transform: rotate(0deg);
 }
-
 .button.pink:hover {
     background-image: url(./images/pink-hover.png);
 }
-
 .button.blue {
     background-image: url("./images/blueX.png");
     transform: rotate(90deg);
 }
-
 .button.blue:hover {
     background-image: url(./images/blue-hover.png);
 }
-
 /* ---------------------------------------------------slide */
 .slide-frame {
     width: 350px;
@@ -278,7 +323,6 @@ header {
     background: transparent;
     overflow: hidden;
 }
-
 .slide-info {
     width: 350px;
     height: 253px;
@@ -289,18 +333,15 @@ header {
     align-items: center;
     position: absolute;
     bottom: 0;
-    transform: translateY(100%);
+    transform: translateY(100%); 
     transition: transform 0.5s ease;
 }
-
 .slide-info.show {
-    transform: translateY(0);
+    transform: translateY(0); 
 }
-
 .slide-info .details {
     height: 155px;
 }
-
 .slide-texts {
     width: 100%;
     height: 112px;
@@ -309,7 +350,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .slide-citate {
     width: 250px;
     color: #FFF;
@@ -318,134 +358,118 @@ header {
     font-weight: 500;
     line-height: 25px;
 }
-
 .slide-socmed {
     width: 60px;
     height: 20px;
     display: flex;
     justify-content: space-between;
 }
-
 .twit {
     width: 24px;
     height: 100%;
     background-image: url(./images/twit.svg);
 }
-
 .twit:hover {
     cursor: pointer;
     background-image: url(./images/twit-pink.svg);
 }
-
 .linkd {
     width: 20px;
-    height: 100%;
-    border-radius: 3px;
+    height: 100%;border-radius: 3px;
     background-color: white;
     text-align: center;
     color: #002529;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 1000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:1000;
 }
-
 .linkd:hover {
     cursor: pointer;
     background-color: #F67E7E;
 }
-
 /* ------------------------------------------clients */
 .clients {
     background: #012F34;
     width: 100%;
     height: 437px;
-    background-image: url(./images/img-page2.3.svg);
-    background-repeat: no-repeat;
-    background-position: left top;
+    padding: 140px 165px;
+    position: relative;
+}
+.img-page2-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img-page2-3-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
 }
 
 .clients-main {
-    padding-top: 140px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
-
-.clients-header {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.clients-header1 h1 {
-    width: 920px;
+.clients-header1 {
+    width: 100%;
     color: #FFF;
     text-align: center;
     font-size: 48px;
     font-weight: 700;
     line-height: 48px;
 }
-
 .clients-img {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 70px;
-    gap: 73px;
 }
-
 .clients-verge {
     width: 165px;
     height: 28px;
 }
-
 .clients-jakarta {
     width: 184px;
     height: 23px;
 }
-
 .clients-guardian {
     width: 184px;
     height: 23px;
 }
-
 .clients-tech {
     width: 165px;
     height: 28px;
 }
-
 .clients-gadgets {
     width: 98px;
     height: 45px;
 }
 
-/* -------------------------foooter */
+/* -------------------------------------------footer */
 .footer-top {
     width: 100vw;
     height: 200px;
-
     background-color: #F67E7E;
-
-    padding: 76px 260px;
-
+    padding: 76px 165px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
 }
-
 .footer-icon-11 {
     position: absolute;
     bottom: 0;
     left: 0;
 }
-
 .footer-top h1 {
     color: #012F34;
     font-size: 48px;
     font-weight: 700;
     line-height: 48px;
 }
-
 .footer-top button {
     width: 153px;
     height: 48px;
@@ -460,9 +484,7 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: 28px;
-
 }
-
 .footer-bottom {
     width: 100%;
     height: 196px;
@@ -471,16 +493,13 @@ header {
     justify-content: space-between;
     padding: 48px 165px;
 }
-
 .footer-bottom-1 {
     width: 160px;
     height: 93px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 .footer-bottom-pages {
     width: 140px;
     height: 28px;
@@ -489,7 +508,6 @@ header {
     align-items: flex-start;
     gap: 40px;
 }
-
 .footer-bottom-2 {
     width: 445px;
     height: 100px;
@@ -500,7 +518,6 @@ header {
     line-height: 25px;
     text-align: left;
 }
-
 .footer-bottom-3 {
     width: 255px;
     height: 100px;
@@ -509,19 +526,16 @@ header {
     justify-content: space-between;
     align-items: end;
 }
-
 .footer-bottom-icons {
     width: 104px;
     height: 24px;
     display: flex;
     justify-content: space-between;
 }
-
 .footer-bottom-icons img {
     width: 24px;
     height: 24px;
 }
-
 .footer-bottom-text {
     height: 25px;
     width: 100%;
@@ -532,68 +546,39 @@ header {
     font-weight: 600;
     line-height: 25px;
 }
-
-@media (max-width: 1200px) {
-    .clients-img {
-        flex-wrap: wrap;
-        padding-left: 50px;
-        padding-right: 20px;
-    }
-
-    .clients-header1 h1 {
-        width: 900px;
-    }
-
-    .clients-header img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .clients {
-        background-repeat: no-repeat;
-        background-position: left -100px;
-    }
-}
-
+/* ------------------------------------------media-maia */
 @media (max-width:1085px) {
     header {
         height: 556px;
         padding: 75px;
     }
-
     .header-body {
         height: 257px;
         flex-direction: column;
         align-items: center;
     }
-
     .header-body-left {
         width: 100%;
         height: 56px;
         text-align: center;
         line-height: 56px;
     }
-
     .rectangle {
         display: none;
     }
-
     .header-body-right {
         width: 457px;
         height: auto;
     }
-
     .header-body-right .text {
         height: 177px;
         text-align: center;
         font-size: 15px;
     }
-
     .about-directors {
         height: 1219px;
         padding: 100px 97px;
     }
-
     .directors {
         height: 939px;
         display: flex;
@@ -602,110 +587,159 @@ header {
         justify-content: space-around;
         gap: 11px;
     }
-
     .director-info {
         width: 281px;
     }
 }
 
 @media (max-width:768px) {
+    header {
+        padding: 64px 40px;
+    }
+    .about-directors {
+        height: 2062px;
+    }
+    .directors {
+        height: 100%;
+        gap: 52px;
+    }
+}
+
+@media (max-width:636px) {
+    .about1 {
+        transform: translateY(50%);
+    }
+    .top-left .home,
+    .top-left .about,
+    .header-top .top-right {
+        display: none;
+    }
+    .mobile-menu,  .menu {
+        display: block;
+    }
+    header {
+        height: 567px;
+        padding: 48px 24px;
+    }
+    .header-top {
+        height: 32px;
+    }
+    .myteam {
+        width: 128px;
+        height: 100%;
+    }
+    .header-body {
+        height: 350px;
+        padding: 0 0 108px 0;
+    }
+    .header-body-left {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .header-body-right {
+        width: 327px;
+    }
+    .about-directors {
+        padding: 88px 24px;
+    }
+    .about2 {
+        transform: translateY(-50%);
+    }
+}
+/* -----------------------------------------------media-nino */
+@media (max-width: 1200px) {
+    .clients-img {
+        flex-wrap: wrap;
+    }
+    .clients-header1 {
+        width: 900px;
+    }
+    .clients-header img {
+        width: 150px;
+        height: 150px;
+    }
+    .clients {
+        padding: 140px 105px;
+    }
+}
+@media (max-width: 1085px) {
     .clients {
         width: 100%;
         height: 308px;
-        margin-top: 700px;
+        padding: 100px 139px;
     }
-
-    .clients-header1 h1 {
+    .img-page2-3 {
+        display: none;
+    }
+    .img-page2-3-1 {
+        display: block;
+    }
+    .clients-header1 {
         width: 457px;
         font-size: 32px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 32px;
     }
-
-    .clients-main {
-        padding-top: 100px;
-    }
-
     .clients-verge {
         width: 103px;
         height: 17px;
     }
-
     .clients-jakarta {
         width: 114px;
         height: 14px;
     }
-
     .clients-guardian {
         width: 112px;
         height: 17px;
     }
-
     .clients-tech {
         width: 103px;
         height: 17px;
     }
-
     .clients-gadgets {
         width: 61px;
         height: 28px;
     }
-
-    .clients-img {
-        gap: 49px;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 52px;
-
-    }
-
-    .clients-header img {
-        margin-top: -50px;
+}
+@media (max-width:820px) {
+    .clients {
+        padding: 100px 39px;
     }
 }
-
-@media (max-width:376px) {
+@media (max-width:626px) {
     .clients {
-        background-position: left -100px top -100px;
         height: 632px;
+        padding: 86px 24px;
     }
-
-    .clients-main {
-        padding-top: 88px;
+    .img-page2-3-1 {
+        transform: translateX(-50%);
     }
-
-    .clients-header1 h1 {
+    .clients-header1 {
         width: 327px;
         font-size: 32px;
         font-weight: 700;
         line-height: 32px;
     }
-
     .clients-img {
         flex-direction: column;
         gap: 57px;
     }
-
     .clients-verge {
         width: 146.561px;
         height: 24.19px;
     }
-
     .clients-jakarta {
         width: 162.213px;
         height: 19.921px;
     }
-
     .clients-guardian {
         width: 159.368px;
         height: 24.19px;
     }
-
     .clients-tech {
         width: 146.561px;
         height: 24.19px;
     }
-
     .clients-gadgets {
         width: 86.798px;
         height: 39.842px;
