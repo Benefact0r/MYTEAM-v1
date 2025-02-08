@@ -19,6 +19,80 @@ body {
     width: 100%;
     position: relative;
 }
+/* -------------------------------------burger-menu */
+.mobile-menu {
+    width: 255px;
+    height: 100vh;
+    padding-top: 112px;
+    background: #2C6269;
+    position: fixed;
+    top: 0;
+    right: -255px;
+    transition: .5s ease;
+    display: none;
+    z-index: 10;
+}
+.mobile-menu.active {
+    right: 0;
+}
+.mobile-menu-group {
+    position: absolute;
+    right: 0;
+    top: 467px;
+}
+.mobile-menu-list {
+    width: 100%;
+    height: 165px;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.mobile-menu-list .home, .about {
+    text-align: start;
+    font-size: 18px;
+    line-height: 28px;
+}
+/* --------------------------------------- */
+.menu { 
+    width: 20px;
+    height: 18px;
+    position: fixed;
+    top: 56px;
+    right: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 11;
+}
+.menu span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+.menu span:nth-child(1) {
+    top: 15%;
+}
+.menu span:nth-child(3) {
+    top: 85%;
+}
+.menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+/* ---------------------------------------------header */
 header {
     width: 100%;
     padding: 75px 165px;
@@ -91,7 +165,7 @@ header {
     background-color: white;
     color: #002529;
 }
-
+/* -------------------------------------registration */
 .registration {
     width: 100%;
     height: 593px;
@@ -111,16 +185,16 @@ header {
 .contact-left-side {
     width: 540px;
 }
-.contact-left-side h1 {
-    width: 350px;
+.contact-left-side .h1 {
+    width: 100%;
     color: #FFF;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
     line-height: 100px;
 }
-.contact-left-side h4 {
-    width: 540px;
+.contact-left-side .h4 {
+    width: 100%;
     color: #F67E7E;
     font-size: 32px;
     font-weight: 700;
@@ -301,4 +375,65 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: 25px;
+}
+
+@media (max-width:1350px) {
+    .registration {
+        padding: 50px 100px;
+    }
+}
+@media (max-width:1200px) {
+    .registration {
+        height: auto;
+    }
+    .contact-main-box {
+        height: auto;
+        flex-direction: column;
+    }
+}
+@media (max-width:768px) {
+    .contact-main-box {
+        gap: 64px;
+    }
+    .contact-left-side {
+        align-items: center;
+    }
+    .h1, .h4 {
+        text-align: center;
+    }
+}
+/* ------------------------------------------------media-header */
+@media (max-width:980px) {
+    header {
+        padding: 75px 150px;
+    }
+    .header-body-left {
+        font-size: 64px; 
+        line-height: 80px;
+    }
+}
+@media (max-width:900px) {
+    header {
+        padding: 64px 40px;
+    }
+}
+@media (max-width:636px) {
+    .top-left .home,
+    .top-left .about,
+    .header-top .top-right {
+        display: none;
+    }
+    .mobile-menu,  .menu {
+        display: block;
+    }
+    header {
+        padding: 48px 24px;
+    }
+    .header-top {
+        height: 32px;
+    }
+    .myteam {
+        width: 128px;
+        height: 100%;
+    }
 }
