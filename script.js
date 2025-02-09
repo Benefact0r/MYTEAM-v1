@@ -43,8 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const burMenu = this.document.querySelector(".menu");
 const mobMenu = document.querySelector(".mobile-menu");
+const shadow = document.querySelector(".shadow");
 
 burMenu.addEventListener("click", () => {
     burMenu.classList.toggle("active");
     mobMenu.classList.toggle("active");
-})
+    shadow.classList.toggle("active"); // ჩნდება ან ქრება ჩაბნელება
+});
