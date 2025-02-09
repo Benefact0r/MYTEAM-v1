@@ -184,6 +184,7 @@ header {
     height: 593px;
     padding: 50px 165px;
     position: relative;
+    overflow: hidden;
 }
 .contact-main-box {
     width: 100%;
@@ -448,5 +449,11 @@ header {
     .myteam {
         width: 128px;
         height: 100%;
+    }
+    .contact-main-box-img {
+        display: none;
+    }
+    .contact-botton-img {
+        transform: translateY(50%);
     }
 }
