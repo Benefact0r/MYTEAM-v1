@@ -364,14 +364,14 @@ header {
     gap: 16px;
 }
 .main-right-feature-text .h3 {
-    width: 445px;
+    width: 100%;
     color: #F67E7E;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px; 
 }
 .main-right-feature-text .ppp {
-    width: 445;
+    width: 100%;
     color: #FFF;
     font-size: 15px;
     font-weight: 500;
@@ -516,11 +516,13 @@ header {
     .main-left h1 br {
         display: none;
     }
-    .main-right {
-        height: 346px;
+}
+@media (max-width:900px) {
+    .footer-top h1 {
+        font-size: 32px;
     }
 }
-
+/* -------------------------------------------nino */
 @media (max-width:768px) {
     .bottom {
         width: 100%;
@@ -556,6 +558,15 @@ header {
     .bottom-stories {
         gap: 20px;
         padding-top: 20px;
+    }
+    .footer-top  {
+        padding: 36px 98px;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+    .footer-icon-11 {
+        transform: translateY(16%);
     }
 }
 
@@ -624,7 +635,7 @@ header {
         font-weight: 500;
         line-height: 28px;
     }
-    /* --------------------------------------------luka */
+    /* --------------------------luka's part */
     .main-features {
         padding: 100px 98px;
     }
@@ -632,6 +643,18 @@ header {
         top: 0;
     }
 }
+@media (max-width:730px) {
+    .main-features {
+        padding: 60px 64px;
+    }
+    .main-left {
+        width: 340px;
+    }
+    .main-right {
+        width: 100%;
+    }
+}
+/* ---------------------------------------- */
 @media (max-width:636px) {
     .top-left .home,
     .top-left .about,
@@ -668,5 +691,29 @@ header {
     }
     .header-body-right {
         width: 327px;
+    }
+    
+    .main-features {
+        padding: 64px 24px; 
+    }
+    .main-right {
+        gap: 48px;
+    }
+    .main-right-feature {
+        height: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-right-feature-text {
+        height: 112px;
+        text-align: center;
+    }
+    .footer-top {
+        height: 302px;
+        padding: 83px 24px;
+        justify-content: space-between;
+    }
+    .footer-top h1 {
+        line-height: 32px;
     }
 }
