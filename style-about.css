@@ -176,6 +176,7 @@ header {
     font-weight: 600;
     line-height: 28px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .home:hover,
 .about:hover {
@@ -605,6 +606,11 @@ header {
         width: 281px;
     }
 }
+@media (max-width:900px) {
+    .footer-top h1 {
+        font-size: 32px;
+    }
+}
 
 @media (max-width:768px) {
     header {
@@ -612,6 +618,15 @@ header {
     }
     .about-directors {
         height: 2062px;
+    }
+    .footer-top  {
+        padding: 36px 98px;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+    .footer-icon-11 {
+        transform: translateY(16%);
     }
 }
 
@@ -660,6 +675,14 @@ header {
     }
     .about2 {
         transform: translateY(-50%);
+    }
+    .footer-top {
+        height: 302px;
+        padding: 83px 24px;
+        justify-content: space-between;
+    }
+    .footer-top h1 {
+        line-height: 32px;
     }
 }
 /* -----------------------------------------------media-nino */

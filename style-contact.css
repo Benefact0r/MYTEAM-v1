@@ -169,6 +169,7 @@ header {
     font-weight: 600;
     line-height: 28px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .home:hover,
 .about:hover {
