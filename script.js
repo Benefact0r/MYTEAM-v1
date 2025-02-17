@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".about").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "about.html";
+            window.location.href = "about.html";
         });
     });
     document.querySelectorAll(".home").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "index.html";
+            window.location.href = "index.html";
         });
     });
     document.querySelectorAll(".myteam").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "index.html";
+            window.location.href = "index.html";
         });
     });
     document.querySelectorAll(".top-right").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "contact.html";
+            window.location.href = "contact.html";
         });
     });
 
@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("message").value = savedData.message || "";
     }
 
+    const loaddData = JSON.parse(localStorage.sav("contactData"));
+    if (savedData) {
+        document.getElementById("name").value = savedData.name || "";
+        document.getElementById("email").value = savedData.email || "";
+        document.getElementById("comp-name").value = savedData.company || "";
+        document.getElementById("title").value = savedData.title || "";
+        document.getElementById("message").value = savedData.message || "";
+    }
+
     submitBtn.addEventListener("click", function (event) {
         event.preventDefault(); 
 
@@ -69,7 +78,30 @@ document.addEventListener("DOMContentLoaded", function () {
         form.reset();
 
         alert("Your message has been saved!"); 
-    });
+    });    
+    // function saveContactInfo() {
+    //     document.getElementById('submit').addEventListener('click', function () {
+    //         event.preventDefault();
+    //         let data = {
+    //             name: document.getElementById('name').value,
+    //             email: document.getElementById('email').value
+    //         };
+    //         localStorage.setItem('formData', JSON.stringify(data));
+    //         alert("Data saved")
+    //     })
+    // }
+    // function loadContactInfo() {
+    //     let savedData = localStorage.getItem('formData');
+    //     if (savedData) {
+    //         let data = JSON.parse('savedData');
+    //         document.getElementById('name').value = data.name;
+    //         document.getElementById('email').value = data.email;
+    //     } else {
+    //         alert("No data found")
+    //     }
+    // }
+    // function clearContactInfo() {
+    // }
 });
 
 // ---------------------------------------------------burger-menu
@@ -80,7 +112,5 @@ const shadow = document.querySelector(".shadow");
 burMenu.addEventListener("click", () => {
     burMenu.classList.toggle("active");
     mobMenu.classList.toggle("active");
-    shadow.classList.toggle("active"); 
+    shadow.classList.toggle("active");
 });
-
-
