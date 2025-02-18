@@ -720,6 +720,7 @@ header {
 
 @media (max-width: 768px) {
     .footer-bottom {
+        display: flex;
         flex-direction: column;
         align-items: center;
         padding: 40px;
@@ -746,30 +747,13 @@ header {
     }
 }
 
-/* 📱 Mobile View (375px) */
 @media (max-width: 375px) {
     .footer-bottom {
         height: 432px;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px;
-        text-align: center;
     }
 
     .footer-bottom-1,
     .footer-bottom-2,
     .footer-bottom-3 {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-
-    .footer-bottom-3 {
-        margin-top: 20px;
-    }
-
-    .footer-bottom-icons {
-        justify-content: center;
-        gap: 20px;
-    }
+    }   
 }
