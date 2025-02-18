@@ -87,20 +87,14 @@ fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json")
     .then(response => response.json())
     .then(data => {
         data.forEach(currency => {
-            const currencies = currency.currencies.filter(currency => currency.code === 'USD');
             const currencies_EUR = currency.currencies.filter(currency => currency.code === 'EUR');
-            console.log(currencies);
-            console.log(currencies_EUR);
 
-            if (currencies && currencies_EUR) {
-                const rate = currencies[0].rate;
+            if (currencies_EUR) {
                 const rate_EUR = currencies_EUR[0].rate
                 const containerinner = document.querySelector('.data-from-api')
                 containerinner.innerText = "Currently EUR/GEL = " + rate_EUR;
-                console.log(rate);
-                console.log(rate_EUR);
             } else {
-                console.log("Value not defined");
+                containerinner.innerText = "Value not defined";
             }
         });
     })
