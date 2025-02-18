@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".about").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "about.html";
+            window.location.href = "about.html";
         });
     });
     document.querySelectorAll(".home").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "index.html";
+            window.location.href = "index.html";
         });
     });
     document.querySelectorAll(".myteam").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "index.html";
+            window.location.href = "index.html";
         });
     });
     document.querySelectorAll(".top-right").forEach(element => {
         element.addEventListener("click", function () {
-        window.location.href = "contact.html";
+            window.location.href = "contact.html";
         });
     });
 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     submitBtn.addEventListener("click", function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const formData = {
             name: document.getElementById("name").value,
@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
             message: document.getElementById("message").value
         };
 
-        localStorage.setItem("contactData", JSON.stringify(formData)); 
+        localStorage.setItem("contactData", JSON.stringify(formData));
 
         form.reset();
 
-        alert("Your message has been saved!"); 
+        alert("Your message has been saved!");
     });
 });
 
@@ -80,7 +80,28 @@ const shadow = document.querySelector(".shadow");
 burMenu.addEventListener("click", () => {
     burMenu.classList.toggle("active");
     mobMenu.classList.toggle("active");
-    shadow.classList.toggle("active"); 
+    shadow.classList.toggle("active");
 });
 
+fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json")
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(currency => {
+            const currencies = currency.currencies.filter(currency => currency.code === 'USD');
+            const currencies_EUR = currency.currencies.filter(currency => currency.code === 'EUR');
+            console.log(currencies);
+            console.log(currencies_EUR);
 
+            if (currencies && currencies_EUR) {
+                const rate = currencies[0].rate;
+                const rate_EUR = currencies_EUR[0].rate
+                const containerinner = document.querySelector('.data-from-api')
+                containerinner.innerText = "Currently EUR/GEL = " + rate_EUR;
+                console.log(rate);
+                console.log(rate_EUR);
+            } else {
+                console.log("Value not defined");
+            }
+        });
+    })
+    .catch(error => console.log(error));
