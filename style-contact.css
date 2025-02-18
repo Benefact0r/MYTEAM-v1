@@ -322,7 +322,25 @@ header {
     cursor: pointer;
 }
 
-
+.exchange-rate-field {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+    background-color: #004047;
+    color: white;
+}
+.data-from-api {
+    min-width: 250px;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+}
 .footer-bottom {
     width: 100%;
     height: 196px;
