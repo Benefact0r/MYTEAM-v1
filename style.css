@@ -419,6 +419,12 @@ header {
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.footer-top button:hover {
+    background-color: #012F34;
+    color: white;
 }
 .footer-bottom {
     width: 100%;
@@ -430,7 +436,7 @@ header {
 }
 .footer-bottom-1 {
     width: 160px;
-    height: 93px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -445,12 +451,13 @@ header {
     gap: 40px;
 }
 .footer-bottom-2 {
-    width: 445px;
+    width: 40%;
     height: 100px;
     color: #FFF;
     font-size: 15px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
+    opacity: 0.7;
     line-height: 25px;
     text-align: left;
 }
@@ -468,17 +475,39 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.footer-bottom-icons img {
+.img-fb {
     width: 24px;
-    height: 24px;
+    height: 100%;
+    background-image: url(./images/footer-icon-fb.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+.img-pint {
+    width: 24px;
+    height: 100%;
+    background-image: url(./images/footer-icon-pinterest.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+.img-twit {
+    width: 25.5px;
+    height: 90%;
+    background-image: url(./images/footer-icon-twitter.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+.img-twit:hover {
+    background-image: url(./images/twit-pink.svg);
+    background-size: cover;
 }
 .footer-bottom-text {
     height: 25px;
-    width: 100%;
+    width: 255px;
     color: #FFF;
     text-align: right;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 400;
+    opacity: 0.7;
     line-height: 25px;
 }
 
@@ -569,6 +598,31 @@ header {
     .footer-icon-11 {
         transform: translateY(16%);
     }
+    .footer-bottom {
+        height: 272px;
+        flex-wrap: wrap;
+    }
+    .footer-bottom-1,
+    .footer-bottom-2 {
+        width: 50%;
+    }
+    .footer-bottom-pages {
+        width: 104px;
+        gap: 24px;
+    }
+    .footer-bottom-pages .home,
+    .footer-bottom-pages .about {
+        font-size: 15px;
+    }
+    .footer-bottom-2 {
+        text-align: end;
+    }
+    .footer-bottom-3 {
+        width: 100%;
+        height: 25px;
+        flex-direction: row;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -590,6 +644,13 @@ header {
     .header-body-left,
     .header-body-left span {
         font-size: 72px; 
+    }
+    .footer-bottom {
+        padding: 56px 40px;
+    }
+    .footer-bottom-myteam {
+        width: 96px;
+        height: 24px;
     }
 }
 @media (max-width:980px) {
