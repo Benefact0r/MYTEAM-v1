@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const submitBtn = document.getElementById("submit");
     
         if (!form || !submitBtn) {
-            return; 
+            return;
         }
     
         let savedData = JSON.parse(localStorage.getItem("contactData")) || [];
@@ -59,23 +59,45 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (event) {
             event.preventDefault();
     
-            const formData = {
-                name: document.getElementById("name").value.trim(),
-                email: document.getElementById("email").value.trim(),
-                company: document.getElementById("comp-name").value.trim(),
-                title: document.getElementById("title").value.trim(),
-                message: document.getElementById("message").value.trim()
-            };
+            let isValid = true;
     
-            savedData.push(formData);
-            localStorage.setItem("contactData", JSON.stringify(savedData));
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const company = document.getElementById("comp-name");
+            const title = document.getElementById("title");
+            const message = document.getElementById("message");
     
-            form.reset();
-            alert("Your message has been saved!");
+            if (name.value.trim() === "") {
+                isValid = false;
+                alert("Please fill in the Name field.");
+            }
+            if (email.value.trim() === "") {
+                isValid = false;
+                alert("Please fill in the Email field.");
+            }
+            if (company.value.trim() === "") {
+                isValid = false;
+                alert("Please fill in the Company Name field.");
+            }
+    
+            if (isValid) {
+                const formData = {
+                    name: name.value.trim(),
+                    email: email.value.trim(),
+                    company: company.value.trim(),
+                    title: title.value.trim(),
+                    message: message.value.trim()
+                };
+    
+                savedData.push(formData);
+                localStorage.setItem("contactData", JSON.stringify(savedData));
+    
+                form.reset();
+                alert("Your message has been saved!");
+            }
         });
     });
-    
-    
+        
 // ---------------------------------------------------burger-menu
 const burMenu = this.document.querySelector(".menu");
 const mobMenu = document.querySelector(".mobile-menu");
