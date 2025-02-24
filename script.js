@@ -112,19 +112,28 @@ burMenu.addEventListener("click", () => {
 fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json")
     .then(response => response.json())
     .then(data => {
-        data.forEach(currency => {
-            const currencies_EUR = currency.currencies.filter(currency => currency.code === 'EUR');
+        const currencies_EUR = data[0].currencies.filter(currency => currency.code === 'EUR');
 
-            if (currencies_EUR) {
-                const rate_EUR = currencies_EUR[0].rate
-                const containerinner = document.querySelector('.data-from-api')
-                containerinner.innerText = "Currently EUR/GEL = " + rate_EUR;
-            } else {
-                containerinner.innerText = "Value not defined";
-            }
-        });
+        if (currencies_EUR.length > 0) {
+            const rate_EUR = currencies_EUR[0].rate;
+            document.querySelector('.exchange-rate').innerText = `Currently EUR/GEL = ${rate_EUR}`;
+
+            document.getElementById("convert-btn").addEventListener("click", function() {
+                const amount = parseFloat(document.getElementById("amount").value);
+                
+                if (!isNaN(amount) && amount > 0) {
+                    const convertedValue = (amount * rate_EUR).toFixed(2);
+                    document.querySelector('.converted-value').innerText = `${amount} EUR = ${convertedValue} GEL`;
+                } else {
+                    alert("Please enter a valid amount!");
+                }
+            });
+        } else {
+            document.querySelector('.exchange-rate').innerText = "Exchange rate not available.";
+        }
     })
     .catch(error => console.log(error));
+
 
 
     document.getElementById("submit").addEventListener("click", function(event) {
