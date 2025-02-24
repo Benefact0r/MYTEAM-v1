@@ -61,7 +61,7 @@
                     <form class="registration-form" action="#">
                         <input type="text" id="name" placeholder="Name" required>
                         <input type="email" id="email" placeholder="Email address" required>
-                        <input type="name" id="comp-name" placeholder="Company Name" >
+                        <input type="name" id="comp-name" placeholder="Company Name">
                         <input type="text" id="title" placeholder="Title">
                         <textarea id="message" placeholder="Message"></textarea>
                         <button id="submit" type="submit">Submit</button>
@@ -74,9 +74,12 @@
         <footer>
             <div class="exchange-rate-field">
                 <h2>NBG Exchange Rate</h2>
-                <div class="data-from-api"></div>
+                <div class="exchange-rate"></div>
+
                 <h3>Calculator</h3>
-                <div class="data-from-api"></div>
+                <input type="number" id="amount" placeholder="Enter EUR amount">
+                <button id="convert-btn">Convert</button>
+                <div class="converted-value"></div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-1">
