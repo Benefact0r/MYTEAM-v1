@@ -286,6 +286,16 @@ header {
     height: 50px;
     font-family: "livvic";
 }
+#email-error{
+    color: #F67E7E;
+    font-family: Livvic;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    display: none;
+}
+
 .registration-form input:focus,
 .registration-form textarea:focus {
     border-color: #79c8c7;
