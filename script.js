@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please fill in the Name field.");
         }
 
-        if (email === "") {
+        if (email=== "") {
             isValid = false;
             alert("Please fill in the Email field.");
         }
@@ -93,11 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isValid) {
             const formData = {
-                name: name.value,
-                email: email.value,
-                company: company.value,
-                title: title.value,
-                message: message.value
+                name: name,
+                email: email,
+                company: company,
+                title: title,
+                message: message
             };
             savedData.push(formData);
             localStorage.setItem("contactData", JSON.stringify(savedData));
