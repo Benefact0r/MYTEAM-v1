@@ -56,42 +56,57 @@ document.addEventListener("DOMContentLoaded", function () {
         savedData = [];
     }
 
-    form.addEventListener("submit", function (event) {
+    document.getElementById("submit").addEventListener("click", function (event) {
         event.preventDefault();
-
         let isValid = true;
 
-        const name = document.getElementById("name");
-        const email = document.getElementById("email");
-        const company = document.getElementById("comp-name");
-        const title = document.getElementById("title");
-        const message = document.getElementById("message");
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const errorMessage = document.getElementById("email-error");
+        const company = document.getElementById("comp-name").value.trim();
+        const title = document.getElementById("title").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-        if (name.value.trim() === "") {
+        // const formElements = document.querySelectorAll('.registration-form');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (name === "") {
             isValid = false;
             alert("Please fill in the Name field.");
         }
-        if (email.value.trim() === "") {
+
+        if (email === "") {
             isValid = false;
             alert("Please fill in the Email field.");
         }
-        if (company.value.trim() === "") {
+
+        if (company === "") {
             isValid = false;
             alert("Please fill in the Company Name field.");
         }
 
+        if (!emailRegex.test(email)) {
+            isValid = false
+            errorMessage.style.display = "block";
+            // email.style.borderBottom = "2px solid red";
+            // formElements.style.borderColor = '#F67E7E';
+            alert("Enter valid email")
+
+        } else {
+            errorMessage.style.display = "none";
+            // email.style.borderBottom = "2px solid green";
+        }
+
         if (isValid) {
             const formData = {
-                name: name.value.trim(),
-                email: email.value.trim(),
-                company: company.value.trim(),
-                title: title.value.trim(),
-                message: message.value.trim()
+                name: name.value,
+                email: email.value,
+                company: company.value,
+                title: title.value,
+                message: message.value
             };
-
             savedData.push(formData);
             localStorage.setItem("contactData", JSON.stringify(savedData));
-
             form.reset();
             alert("Your message has been saved!");
         }
@@ -133,33 +148,3 @@ fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json")
         }
     })
     .catch(error => console.log(error));
-
-
-
-document.getElementById("submit").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (name.length < 2) {
-        alert("Name must be at least 2 characters long.");
-        return;
-    }
-
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
-
-    if (message.length > 0 && message.length < 10) {
-        alert("Message must be at least 10 characters long.");
-        return;
-    }
-
-    alert("Form submitted successfully!");
-    document.querySelector(".registration-form").submit();
-});
