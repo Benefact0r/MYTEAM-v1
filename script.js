@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })
 
-// --------------------------------------------------------------local storage
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".registration-form");
     const submitBtn = document.getElementById("submit");
@@ -67,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const title = document.getElementById("title").value.trim();
         const message = document.getElementById("message").value.trim();
 
-        // const formElements = document.querySelectorAll('.registration-form');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (name === "") {
@@ -88,13 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!emailRegex.test(email)) {
             isValid = false
             errorMessage.style.display = "block";
-            // email.style.borderBottom = "2px solid red";
-            // formElements.style.borderColor = '#F67E7E';
             alert("Enter valid email")
-
         } else {
             errorMessage.style.display = "none";
-            // email.style.borderBottom = "2px solid green";
         }
 
         if (isValid) {
@@ -113,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ---------------------------------------------------burger-menu
 const burMenu = this.document.querySelector(".menu");
 const mobMenu = document.querySelector(".mobile-menu");
 const shadow = document.querySelector(".shadow");
