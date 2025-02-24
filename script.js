@@ -125,3 +125,33 @@ fetch("https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json")
         });
     })
     .catch(error => console.log(error));
+
+
+    document.getElementById("submit").addEventListener("click", function(event) {
+        event.preventDefault();
+    
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        if (name.length < 2) {
+            alert("Name must be at least 2 characters long.");
+            return;
+        }
+    
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+    
+        if (message.length > 0 && message.length < 10) {
+            alert("Message must be at least 10 characters long.");
+            return;
+        }
+    
+        alert("Form submitted successfully!");
+        document.querySelector(".registration-form").submit();
+    });
+    
