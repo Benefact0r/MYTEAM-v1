@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         } else {
             nameMessage.style.display = "none";
-            isValid = true;
         }
 
         if (email === "") {
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         } else {
             errorMessage.style.display = "none";
-            isValid = true;
         }
 
         if (company === "") {
@@ -91,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
             companyMessage.style.display = "block";
         } else {
             companyMessage.style.display = "none";
-            isValid = true;
         }
 
         if (!emailRegex.test(email)) {
