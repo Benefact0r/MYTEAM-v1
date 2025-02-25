@@ -59,9 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         let isValid = true;
 
-        const name = document.getElementById("name").value.trim();
+        const nameInput = document.getElementById("name");
+        const name = nameInput.value.trim();
         const nameMessage = document.getElementById("text-error");
-        const email = document.getElementById("email").value.trim();
+        const emailInput = document.getElementById("email");
+        const email = emailInput.value.trim();
         const errorMessage = document.getElementById("email-error");
         const company = document.getElementById("comp-name").value.trim();
         const companyMessage = document.getElementById("name-error");
@@ -71,24 +73,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (name === "") {
+            nameInput.classList.add("error");
             nameMessage.style.display = "block";
             isValid = false;
         } else {
+            nameInput.classList.remove("error");
             nameMessage.style.display = "none";
+            isValid = true;
         }
 
         if (email === "") {
+            emailInput.classList.add("error");
             errorMessage.style.display = "block";
             isValid = false;
         } else {
+            emailInput.classList.remove("error");
             errorMessage.style.display = "none";
+            isValid = true;
         }
 
         if (company === "") {
-            isValid = false;
             companyMessage.style.display = "block";
+            isValid = false;
         } else {
             companyMessage.style.display = "none";
+            isValid = true;
         }
 
         if (!emailRegex.test(email)) {

@@ -297,7 +297,11 @@ header {
     line-height: normal;
     display: none;
 }
-
+#text.error::placeholder,
+#email.error::placeholder,
+#name.error::placeholder {
+    color: #F67E7E;
+}
 .registration-form input:focus,
 .registration-form textarea:focus {
     border-color: #79c8c7;
