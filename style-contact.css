@@ -262,21 +262,21 @@ header {
     justify-content: space-between;
     align-items: flex-start;
 }
-.registration-form input.error {
+.registration-form input,
+.registration-form textarea {
     width: 100%;
     background-color: transparent;
-    border: solid #F67E7E;
+    border: solid white;
     border-width: 0 0 1px 0;
     color: white;
     outline: none;
     padding-left: 16px;
     padding-bottom: 20px;
 }
-.registration-form input,
-.registration-form textarea {
+.registration-form input.error {
     width: 100%;
     background-color: transparent;
-    border: solid white;
+    border: solid #F67E7E;
     border-width: 0 0 1px 0;
     color: white;
     outline: none;
@@ -295,6 +295,17 @@ header {
     letter-spacing: -0.115px;
     height: 50px;
     font-family: "livvic";
+}
+#text-error,
+#email-error,
+#name-error {
+    color: #F67E7E;
+    font-family: Livvic;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    display: none;
 }
 .registration-form input:focus,
 .registration-form textarea:focus {
