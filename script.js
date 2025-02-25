@@ -73,15 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
         if (name === "") {
             nameMessage.style.display = "block";
             isValid = false;
+        } else {
+            nameMessage.style.display = "none";
+            isValid = true;
         }
 
-        if (email=== "") {
+        if (email === "") {
+            errorMessage.style.display = "block";
             isValid = false;
+        } else {
+            errorMessage.style.display = "none";
+            isValid = true;
         }
 
         if (company === "") {
             isValid = false;
             companyMessage.style.display = "block";
+        } else {
+            companyMessage.style.display = "none";
+            isValid = true;
         }
 
         if (!emailRegex.test(email)) {
