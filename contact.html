@@ -58,20 +58,26 @@
                     </div>
                 </div>
                 <div class="contact-right-side">
-                    <form class="registration-form" action="registration-form">
-                        <input type="text" placeholder="Name" id="name">
-                        <input type="email" placeholder="Email address" id="email">
-                        <input type="name" placeholder="Company Name" id="comp-name">
-                        <input type="text" placeholder="Title" id="title">
-                        <textarea name="textarea" placeholder="message" id="message"></textarea>
-                        <button id="submit">Submit</button>
+                    <form class="registration-form" action="#">
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="email" id="email" placeholder="Email address" required>
+                        <input type="name" id="comp-name" placeholder="Company Name" >
+                        <input type="text" id="title" placeholder="Title">
+                        <textarea id="message" placeholder="Message"></textarea>
+                        <button id="submit" type="submit">Submit</button>
                     </form>
                 </div>
-                <div class="contact-botton-img"> <img src="./images/contact-img1.svg" alt=""></div>
             </div>
+            <div class="contact-botton-img"> <img src="./images/contact-img1.svg" alt=""></div>
         </div>
 
         <footer>
+            <div class="exchange-rate-field">
+                <h2>NBG Exchange Rate</h2>
+                <div class="data-from-api"></div>
+                <h3>Calculator</h3>
+                <div class="data-from-api"></div>
+            </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-1">
                     <div class="footer-bottom-myteam">
@@ -86,9 +92,9 @@
                     949-833-7432</div>
                 <div class="footer-bottom-3">
                     <div class="footer-bottom-icons">
-                        <img src="./images/footer-icon-fb.svg" alt="fb">
-                        <img src="./images/footer-icon-pinterest.svg" alt="pinterest">
-                        <img src="./images/footer-icon-twitter.svg" alt="twitter">
+                        <div class="img-fb"> </div>
+                        <div class="img-pint"> </div>
+                        <div class="img-twit"> </div>
                     </div>
                     <div class="footer-bottom-text">Copyright 2020. All Rights Reserved</div>
                 </div>
