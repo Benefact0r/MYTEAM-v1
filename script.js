@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailInput = document.getElementById("email");
         const email = emailInput.value.trim();
         const errorMessage = document.getElementById("email-error");
-        const companyInput = document.getElementById("comp-name");
-        const company = companyInput.value.trim();
+        const company = document.getElementById("comp-name").value.trim();
         const companyMessage = document.getElementById("name-error");
         const title = document.getElementById("title").value.trim();
         const message = document.getElementById("message").value.trim();
