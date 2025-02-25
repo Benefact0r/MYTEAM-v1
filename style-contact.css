@@ -282,6 +282,7 @@ header {
     outline: none;
     padding-left: 16px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 #name,
 #email,
@@ -306,6 +307,11 @@ header {
     font-weight: 700;
     line-height: normal;
     display: none;
+}
+#text.error::placeholder,
+#email.error::placeholder,
+#name.error::placeholder {
+    color: #F67E7E;
 }
 .registration-form input:focus,
 .registration-form textarea:focus {
