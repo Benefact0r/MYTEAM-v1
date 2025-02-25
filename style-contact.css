@@ -273,17 +273,6 @@ header {
     padding-left: 16px;
     padding-bottom: 20px;
 }
-.registration-form input.error {
-    width: 100%;
-    background-color: transparent;
-    border: solid #F67E7E;
-    border-width: 0 0 1px 0;
-    color: white;
-    outline: none;
-    padding-left: 16px;
-    padding-bottom: 20px;
-    cursor: pointer;
-}
 #name,
 #email,
 #comp-name,
