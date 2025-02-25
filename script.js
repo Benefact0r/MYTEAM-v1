@@ -55,38 +55,38 @@ document.addEventListener("DOMContentLoaded", function () {
         savedData = [];
     }
 
-    document.getElementById("submit").addEventListener("click", function (event) {
+    submitBtn.addEventListener("click", function (event) {
         event.preventDefault();
         let isValid = true;
 
         const name = document.getElementById("name").value.trim();
+        const nameMessage = document.getElementById("text-error");
         const email = document.getElementById("email").value.trim();
         const errorMessage = document.getElementById("email-error");
         const company = document.getElementById("comp-name").value.trim();
+        const companyMessage = document.getElementById("name-error");
         const title = document.getElementById("title").value.trim();
         const message = document.getElementById("message").value.trim();
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (name === "") {
+            nameMessage.style.display = "block";
             isValid = false;
-            alert("Please fill in the Name field.");
         }
 
         if (email=== "") {
             isValid = false;
-            alert("Please fill in the Email field.");
         }
 
         if (company === "") {
             isValid = false;
-            alert("Please fill in the Company Name field.");
+            companyMessage.style.display = "block";
         }
 
         if (!emailRegex.test(email)) {
             isValid = false
             errorMessage.style.display = "block";
-            alert("Enter valid email")
         } else {
             errorMessage.style.display = "none";
         }
@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("contactData", JSON.stringify(savedData));
             form.reset();
             alert("Your message has been saved!");
+
         }
     });
 });

@@ -286,7 +286,9 @@ header {
     height: 50px;
     font-family: "livvic";
 }
-#email-error{
+#text-error,
+#email-error,
+#name-error {
     color: #F67E7E;
     font-family: Livvic;
     font-size: 10px;
